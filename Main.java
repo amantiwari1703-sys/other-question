@@ -1,15 +1,16 @@
 public class Main {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         Demo d=new Demo();
-        System.out.println(d.findMax(7,9));
+        d.msg();
+
     }
 }
-interface Max{
-    int findMax(int a,int b);
+interface message{
+    void msg();
 
 }
-class Demo implements Max{
-    public int findMax(int a,int b){
-        return (a>b)?a:b;
+class Demo implements message{
+    public void msg(){
+        System.out.println("welcome to java ");
     }
 }
