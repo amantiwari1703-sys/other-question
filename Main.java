@@ -1,15 +1,18 @@
 public class Main {
     public static void main(String[] args) {
-        Demo d=new Demo();
-        System.out.println(d.getCube(3));
-
+Demo d=new Demo();
+        System.out.println(d.pow(2,3));
     }
 }
-interface Cube{
-    int getCube(int n);
+interface Power{
+    int pow(int a,int b);
 }
-class Demo implements Cube{
-    public int getCube(int n){
-        return n*n*n;
+class Demo implements Power{
+    public int pow(int a,int b){
+        int result =1;
+        for(int i=0;i<b;i++){
+            result*=a;
+        }
+        return result;
     }
 }
