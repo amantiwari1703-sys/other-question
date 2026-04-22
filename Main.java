@@ -1,14 +1,16 @@
 public class Main {
     public static void main(String[] args) {
         Demo d = new Demo();
-        System.out.println(d.rev("java"));
+        System.out.println(d.len("hello"));
     }
 }
-interface Reverse{
-    String rev(String str);
-}
-class Demo implements Reverse{
-    public String rev(String str){
-        return new StringBuilder(str).reverse().toString();
+interface length {
+   public int len(String str);
+
+    }
+
+class Demo implements length{
+    public int len(String str){
+        return str.length();
     }
 }
