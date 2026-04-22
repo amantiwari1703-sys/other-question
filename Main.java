@@ -1,18 +1,14 @@
 public class Main {
     public static void main(String[] args) {
-Demo d=new Demo();
-        System.out.println(d.pow(2,3));
+        Demo d = new Demo();
+        System.out.println(d.rev("java"));
     }
 }
-interface Power{
-    int pow(int a,int b);
+interface Reverse{
+    String rev(String str);
 }
-class Demo implements Power{
-    public int pow(int a,int b){
-        int result =1;
-        for(int i=0;i<b;i++){
-            result*=a;
-        }
-        return result;
+class Demo implements Reverse{
+    public String rev(String str){
+        return new StringBuilder(str).reverse().toString();
     }
 }
